@@ -6,7 +6,7 @@
 
 ### Homework
 * Sign up for our slack: [dynamicweb2017.slack.com](https://dynamicweb2017.slack.com/)
-* Please review the following topics as needed. Do a tutorial or reading about at least one, and [write a learning log](https://github.com/antiboredom/dm2193b/blob/master/learninglogs.md):
+* Please review the following topics as needed. Do a tutorial or reading about at least one, and [write a learning log](https://github.com/antiboredom/dynamicweb-2017/blob/master/learninglogs.md):
 	* HTML/CSS
 	* Javascript
 	* Git/github

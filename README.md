@@ -6,7 +6,7 @@
 
 #### Integrated Digital Media • Technology, Culture & Society Department
 
-    Sam Lavigne <splavigne@gmail.com>
+    Sam Lavigne <lavigne@nyu.edu>
     Spring 2017 • Mondays & Wednesdays • 6:30-8:20PM
     Office hours by appointment or directly after class
 

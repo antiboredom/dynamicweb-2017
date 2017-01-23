@@ -167,7 +167,6 @@ If you are student with a disability who is requesting accommodations, please co
 * Web Server Space
     * You can receive web server space from IDM’s Technology Manager, Elton Kwok, MAGNET 883\. IDM’s FTP server info: [http://sites.bxmc.poly.edu](http://sites.bxmc.poly.edu) (Use active mode)
     * HIGHLY RECOMMEND setting up your own domain. Some hosting options:
-    	* [Siteground](https://www.siteground.com/)
-      	* [Dreamhost](https://www.dreamhost.com/promo/edunyu/)
+       * Digital Ocean
        * Heroku
        * AWS

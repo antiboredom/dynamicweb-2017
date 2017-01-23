@@ -14,6 +14,6 @@
 
 #### Syllabus: [github.com/antiboredom/dynamicweb-2017](http://github.com/antiboredom/dynamicweb-2017)
 
-#### Schedule: [github.com/antiboredom/dynamicweb2017/blob/master/schedule.md](http://github.com/antiboredom/dynamicweb2017/blob/master/schedule.md)
+#### Schedule: [github.com/antiboredom/dynamicweb-2017/blob/master/schedule.md](http://github.com/antiboredom/dynamicweb-2017/blob/master/schedule.md)
 
-#### Readings: [github.com/antiboredom/dynamicweb2017/blob/master/readings.md](http://github.com/antiboredom/dynamicweb2017/blob/master/readings.md)
+#### Readings: [github.com/antiboredom/dynamicweb-2017/blob/master/readings.md](http://github.com/antiboredom/dynamicweb-2017/blob/master/readings.md)

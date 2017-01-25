@@ -1,0 +1,49 @@
+<html>
+  <script>
+
+    var player = {
+      hunger: 0,
+
+      eat: function() {
+        this.hunger  --;
+      },
+
+      update: function() {
+        this.hunger ++;
+      },
+
+      getStatus: function() {
+        if (this.hunger <= 3) {
+          return "full";
+        } else if (this.hunger > 3 && this.hunger < 7) {
+          return "hungry";
+        } else {
+          return "starving";
+        }
+      },
+
+      isDead: function() {
+        if (this.hunger > 10) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+
+    function gameLoop() {
+      player.update();
+
+      var status = player.getStatus();
+      console.log("You are " + status);
+
+      if (player.isDead()) {
+        console.log('You died! Refresh to play again');
+      } else {
+        setTimeout(gameLoop, 500);
+      }
+    }
+
+    setTimeout(gameLoop, 500);
+  </script>
+</html>

@@ -27,6 +27,7 @@
 * Read:
 	* [Intro to the Command Line](https://tutorial.djangogirls.org/en/intro_to_command_line/)
 	* Web development with Node & Express chapters 1 and  2
+	* Make a text-only based game that you can play through the Javascript console by calling functions. See the example...
 
 <!---
 * Make a web page that has no vis 

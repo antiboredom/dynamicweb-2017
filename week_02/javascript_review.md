@@ -25,6 +25,9 @@ var lastName = "Lavigne"
 
 // concatenate strings
 var fullName = firstName + " " + lastName; // returns "Sam Lavigne"
+
+// access a character of a string
+var secondLetter = fullName[1];
 ```
 
 ## Arrays

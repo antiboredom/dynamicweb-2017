@@ -66,9 +66,9 @@ Plan to do one **Learning Log** per week, and one **Ticket to Leave** per class.
 All dates and assignments are **subject to change** at the discretion of the professor, depending on the interests and pace of the class. Any changes will be announced in class, updated on the GitBook (Syllabus), and posted to Slack (discussion forum).
 
 
-### [READINGS]()
+### [READINGS](https://github.com/antiboredom/dynamicweb-2017/blob/master/readings.md)
 
-Weekly reading assignments will utilize free online resources and tutorials. There is no required textbook, but there is an optional (strongly recommended) textbook, and additional recommendations can be found in the [Readings & Resources]() section, and students are encouraged to pursue self-guided learning and document / share resources via Learning Logs.
+Weekly reading assignments will utilize free online resources and tutorials. There is no required textbook, but there is an optional (strongly recommended) textbook, and additional recommendations can be found in the [Readings & Resources](https://github.com/antiboredom/dynamicweb-2017/blob/master/readings.md) section, and students are encouraged to pursue self-guided learning and document / share resources via Learning Logs.
 
 
 ## EVALUATION & GRADING
@@ -167,7 +167,6 @@ If you are student with a disability who is requesting accommodations, please co
 * Web Server Space
     * You can receive web server space from IDM’s Technology Manager, Elton Kwok, MAGNET 883\. IDM’s FTP server info: [http://sites.bxmc.poly.edu](http://sites.bxmc.poly.edu) (Use active mode)
     * HIGHLY RECOMMEND setting up your own domain. Some hosting options:
-    	* [Siteground](https://www.siteground.com/)
-      	* [Dreamhost](https://www.dreamhost.com/promo/edunyu/)
+       * Digital Ocean
        * Heroku
        * AWS

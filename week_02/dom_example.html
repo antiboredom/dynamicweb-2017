@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <title>Yo</title>
+</head>
+
+<body>
+
+  <div id="message">Hello I am the message</div>
+
+  <button id="clicker">click me</button>
+  <script>
+
+    // var totalClicks = 0;
+    //
+    // document.getElementById('clicker').addEventListener('click', function(e) {
+    //   totalClicks ++;
+    //   document.getElementById('message').textContent = "You clicked " + totalClicks + " times.";
+    
+    var counter = 0;
+    var c2 = 0;
+
+    setInterval(function(){
+      c2 ++;
+      console.log(c2);
+      document.getElementById('message').textContent = counter;
+    }, 500);
+
+    // });
+  </script>
+
+  <body>
+
+</html>

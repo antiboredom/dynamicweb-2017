@@ -18,7 +18,7 @@
 		* arrow functions
 	* modules
 		* export.x = x
-		* 
+		* module.exports = {}
 	* npm
 		* package.js
 		* npm init

@@ -1,34 +1,31 @@
-# Jan 25
+# Jan 30
 
-* Review homework
+* omg the world is falling apart?
+* 3-4 volunteers show their homework to the class
+* The command line
+	* Moving around
+	* Making files/folders
+	* Searching
+	* Arguments/parameters
+	* Getting help
+	* Stdin/stdout
+	* Piping
+	* and more!
+* Intro to node
+	* es6
+		* const
+		* let
+		* arrow functions
+	* modules
+		* export.x = x
+		* 
+	* npm
+		* package.js
+		* npm init
+		* npm install --save
+		* npm install -g
 
-* Javascript review (this might get extended to next week if we run out of time)
-	* variables
-		* variable types
-	* scope
-	* arrays
-		* creating, pushing and looping
-	* functions
-		* parameters
-		* return values
-		* functions are variables
-	* objects
-		* objects vs "classes"
-		* what is "this"?
-	* callbacks
-	* events
-
-	
-	
-### Homework
-* Install node.js
-	* [mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
-	* [windows](http://blog.teamtreehouse.com/install-node-js-npm-windows)
-* Read:
-	* [Intro to the Command Line](https://tutorial.djangogirls.org/en/intro_to_command_line/)
-	* Web development with Node & Express chapters 1 and  2
-	* Make a text-only based game that you can play through the Javascript console by calling functions. See the example...
-
-<!---
-* Make a web page that has no vis 
--->
+		
+## Homework
+* convert your text-based game into a node module that can be run from the node interactive shell
+* read Web development with Node & Express chapter 3

@@ -12,7 +12,7 @@
 
 #### Slack: [dynamicweb2017.slack.com](https://dynamicweb2017.slack.com/)
 
-#### Syllabus: [github.com/antiboredom/dynamicweb-2017](http://github.com/antiboredom/dynamicweb-2017)
+#### Syllabus: [github.com/antiboredom/dynamicweb-2017](http://github.com/antiboredom/dynamicweb-2017/blob/master/syllabus.md)
 
 #### Schedule: [github.com/antiboredom/dynamicweb-2017/blob/master/schedule.md](http://github.com/antiboredom/dynamicweb-2017/blob/master/schedule.md)
 

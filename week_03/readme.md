@@ -22,3 +22,27 @@
 
 ## Homework
 * TBD at end of class
+
+
+# Feb 8
+* templates
+	* We're using [express-handlebars](https://github.com/ericf/express-handlebars) which uses [handlebars](http://handlebarsjs.com/) syntax
+	* sending object
+		* ```{{something.whatever}}```
+	* loops
+		* ```{{#each somethings}}{{item}}{{/each}}```
+	* if statementsp
+		* ```{{#if something}}{{/if}}```
+	* changing or disabling layouts ```res.render('home', {layout: false})```
+	* partials
+		* store in ```views/partials```
+		*  ```{{> partialname}}```
+
+* review callbacks
+* middleware
+* multiple callbacks
+
+***
+
+## Homework
+* TBD at end of class

@@ -1,0 +1,22 @@
+<h1>{{user.realname}}</h1>
+
+{{#if user.avatar}}
+<div>
+  <img width="200" src="{{user.avatar}}">
+</div>
+{{/if}}
+
+{{#if user.hipHopName}}
+  AKA: <i>{{user.hipHopName}}</i>
+{{else}}
+  No hip hop name
+{{/if}}
+
+<h2>Age: {{user.age}}</h2>
+
+<h2>Friends</h2>
+
+{{#each friends}}
+  {{> singleuser}}
+{{/each}}
+

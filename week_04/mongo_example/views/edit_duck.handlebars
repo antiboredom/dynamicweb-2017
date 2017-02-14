@@ -1,0 +1,27 @@
+
+{{#if message}}
+  <p style="background-color: red">{{message}}</p>
+{{/if}}
+
+<form action="/ducks/{{duck.name}}" method="post">
+
+  <div>
+    <input type="text" placeholder="Duck name" name="name" value="{{duck.name}}">
+  </div>
+
+  <div>
+    <input type="text" value="{{duck.color}}" placeholder="color" name="color">
+  </div>
+
+  <div>
+    <input type="text" placeholder="age" value="{{duck.age}}" name="age">
+  </div>
+
+  <div>
+    <input type="text" placeholder="favorite foods" name="favoriteFoods">
+  </div>
+
+  <div>
+    <input type="submit" value="EDIT THIS DUCK">
+  </div>
+</form>

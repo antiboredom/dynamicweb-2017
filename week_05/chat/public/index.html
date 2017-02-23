@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chat!</title>
+  <style>
+    #chat-window {
+      height: 500px;
+      overflow: scroll;
+    }
+    #chat {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="chat-window"></div>
+
+    <form id="chat" action="">
+      <input type="text" placeholder="name" id="username" value="">
+      <input type="text" autocomplete="off" placeholder="message" id="message" value="">
+      <input type="submit" value="Send">
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect(window.location.origin);
+
+    function addToChat(data) {
+      var chat = document.querySelector('#chat-window');
+      var p = document.createElement('p');
+      p.innerHTML = data.username + ': ' + data.message;
+
+      chat.appendChild(p);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    document.querySelector('#chat').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = {
+        username: document.querySelector('#username').value,
+        message: document.querySelector('#message').value
+      };
+      document.querySelector('#message').value = '';
+      document.querySelector('#message').focus();
+
+      console.log(data);
+      addToChat(data);
+      socket.emit('message', data);
+    });
+
+    socket.on('message', function(data) {
+      addToChat(data);
+    });
+  </script>
+</body>
+
+</html>

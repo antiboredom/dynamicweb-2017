@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect(window.location.origin);
+      socket.on('connected', function(data) {
+        console.log(data);
+      });
+
+      socket.on('message', function (data) {
+        console.log(data.msg);
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

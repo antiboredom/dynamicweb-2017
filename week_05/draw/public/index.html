@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+  </head>
+  <body>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect(window.location.origin);
+
+      function drawRect(x, y) {
+        var rect = document.createElement('div');
+        rect.style.position = 'absolute';
+        rect.style.width = '10px';
+        rect.style.height = '10px';
+        rect.style.backgroundColor = '#000';
+        rect.style.top = y + 'px';
+        rect.style.left = x + 'px';
+
+        document.body.appendChild(rect);
+      }
+
+      document.body.addEventListener('click', function(e) {
+        socket.emit('draw', {x: e.clientX, y: e.clientY});
+        drawRect(e.clientX, e.clientY);
+      });
+
+      socket.on('draw', function (data) {
+        drawRect(data.x, data.y);
+      });
+
+    </script>
+    
+  </body>
+</html>
+

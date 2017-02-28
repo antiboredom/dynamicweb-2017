@@ -1,6 +1,7 @@
 # Feb 27
 
 * More on sockets
+* making a game-like thing
 * Integrating sockets with your database
 * Get/post
 * Ajax

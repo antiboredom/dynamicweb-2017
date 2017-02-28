@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chat!</title>
+  <style>
+    .username {
+      margin-right: 10px;
+    }
+    #chatter {
+      position: absolute;
+      bottom: 10px;
+    }
+
+    #chats {
+      overflow: scroll;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="chats"></div>
+
+    <form id="chatter">
+      <input type="text" value="#000000" size="8" id="color">
+      <input type="text" id="username" placeholder="username">
+      <input type="text" id="message" placeholder="message">
+      <input type="submit" id="submit" value="GO">
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    var socket = io.connect(window.location.origin);
+
+    var color = document.querySelector('#color');
+    var username = document.querySelector('#username');
+    var message = document.querySelector('#message');
+    var form = document.querySelector('form');
+    var chats = document.querySelector('#chats');
+
+    function writeMessage(data) {
+      var messageDiv = document.createElement('div');
+      var usernameHolder = document.createElement('span');
+      usernameHolder.style.color = data.color;
+      usernameHolder.innerHTML = data.username + ':';
+      usernameHolder.classList.add('username');
+      messageDiv.appendChild(usernameHolder);
+
+      var messageHolder = document.createElement('span');
+      messageHolder.innerHTML = data.message;
+      messageDiv.appendChild(messageHolder);
+
+      chats.appendChild(messageDiv);
+      chats.scrollTop = chats.scrollHeight;
+    }
+
+    form.addEventListener('submit', function(event){
+      event.preventDefault();
+      
+      if (username.value.trim() == '' || message.value.trim() == '') {
+        return false;
+      }
+
+      var data = {
+        username: username.value,
+        color: color.value,
+        message: message.value
+      }
+      socket.emit('message', data);
+      writeMessage(data);
+      message.value = '';
+      console.log(data);
+    });
+
+    socket.on('message', function(data){
+      console.log(data);
+      writeMessage(data);
+      // document.write(data);
+    });
+  </script>
+</body>
+
+</html>

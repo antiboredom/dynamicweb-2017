@@ -2,6 +2,11 @@ var express = require('express')
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var food = require('./food');
+
+food.getFood2()
+food.getFood()
+console.log(food.name);
 
 server.listen(process.env.PORT || 5000);
 

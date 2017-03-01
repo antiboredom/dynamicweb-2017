@@ -50,7 +50,8 @@
       var messageDiv = document.createElement('div');
       var usernameHolder = document.createElement('span');
       usernameHolder.style.color = data.color;
-      usernameHolder.innerHTML = data.username + ':';
+      //text content prevents you from sticking in HTML!
+      usernameHolder.textContent = data.username + ':';
       usernameHolder.classList.add('username');
       messageDiv.appendChild(usernameHolder);
 

@@ -1,0 +1,51 @@
+<html>
+  <head><title>To do</title></head> 
+
+  <body>
+
+    <h1>To do list</h1>
+
+    <div id="itworked" style="display:none;">IT WORKED!!!</div>
+    <input type="text" id="todo-item">
+    <button>GO</button>
+
+    <div id="status" style="display:none;">SUBMITTING</div>
+
+    <ul></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+
+      function createToDo() {
+        $('button').attr('disabled', true);
+        $('#status').show()
+
+        $.post('/create', {item: $('#todo-item').val()}, function(data){
+          var liItem = $('<li>');
+          liItem.html($('#todo-item').val());
+          $('ul').append(liItem);
+
+          $('button').attr('disabled', false);
+          $('#status').hide();
+          $('#todo-item').val('');
+          $('#itworked').show().fadeOut(1000);
+          
+          console.log(data);
+        });
+      }
+
+      $('button').on('click', createToDo);
+
+
+      $.getJSON('/items', function(results){
+        results.forEach(function(item){
+          var liItem = $('<li>');
+          liItem.html(item.item);
+          $('ul').append(liItem);
+        });
+      });
+    </script>
+  </body>
+</html>
+

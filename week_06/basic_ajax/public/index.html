@@ -1,0 +1,42 @@
+<html>
+  <head><title>Hello</title></head> 
+
+  <body>
+
+    <h1>hi!!!!</h1>
+
+    <input id="name"><button id="name-button">GO</button>
+    <div id="container">something</div>
+  
+    <button id="book-button">Get Favorite Books</button>
+    <div id="favoritebooks"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+      $('#name-button').on('click', function(){
+        var params = {
+          name: $('#name').val(),
+          adj: 'cool'
+        }
+
+        $.get('/hello', params, function(data){
+          $('#container').html(data);
+        });
+
+        // $('#container').load('/hello', params);
+      });
+
+      $('#book-button').on('click', function(){
+        $.getJSON('/favoritebooks', function(data){
+          console.log(data);
+          for (var i = 0; i < data.length; i++) {
+            var p = $('<p></p>');
+            p.html(data[i].title + ' by ' + data[i].author)
+            $('#favoritebooks').append(p);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
